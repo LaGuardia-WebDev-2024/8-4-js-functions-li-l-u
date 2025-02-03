@@ -2,20 +2,27 @@
 void setup(){
   size(600, 400); 
   background(255,255,255);
+  drawName();
+  drawName();
+  drawName();
+};
 
-  var textX = random(50, 550);
+//🟢Draw Function - Runs on Repeat
+draw = function(){  
+  
+};
+
+var drawName = function(){
+
+var textX = random(50, 550);
   var textY = random(50, 350);
-  var yourName = "Your Name";
+  var yourName = "Li";
 
   fill(241,9,55);
   textSize(40);
   text("Hiiii, " + yourName, textX, textY);
+
 }
-
-//🟢Draw Function - Runs on Repeat
-draw = function(){  
-
-};
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
@@ -29,6 +36,13 @@ var drawStar = function(){
   text("⭐",starX, starY);
 };
 
+var drawFace = function(){
+  var faceSize = random(2,12);
+  var faceX = mouseX + random(-12,12);
+  var faceY = mouseY + random(-12,12);
+  textSize(faceSize);
+  text("😊 ",faceX, faceY);
+};
 //🟡mouseClicked Function - will run when the mouse is clicked
 mouseClicked = function(){
   var myText = "x: " + mouseX + "\ny: " + mouseY;
@@ -37,4 +51,11 @@ mouseClicked = function(){
   drawStar();
   drawStar();
   drawStar();
+  drawName();
+  drawName();
+  drawName();
+  drawFace();
+  drawFace();
+  drawFace();
 };
+
